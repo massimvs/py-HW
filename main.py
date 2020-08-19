@@ -1,24 +1,17 @@
-def secondary():
-    print("Secondary")
 
-def add(a, b):
-    # return a + b
-    print
-    print("Add", a, b)
-    res = a + b
+def power(a, pow=2):
+    return a ** pow
+
+
+def count_values(counter, *args):
+    return [counter(v) for v in args]
+
+#def count_values(counter, *args):
+#    return {v: counter(v) for v in args}
 
 
 def main():
-    secondary()
-    print('Hello main')
+    res = count_values(power, 1, 2, 3, 5)
+    print(res)
 
 main()
-
-
-def rain_today():
-    res = ... # some web request to whether API
-    if res.status == "OK"
-        return res.data.will_rain
-    # print
-    return None
-
